@@ -5,6 +5,7 @@ from mani_skill.utils.wrappers.record import RecordEpisode
 # TODO: Change this to import your env
 # from tasks.JunhaoChen.card_stack_env import CardStackEnv
 from tasks.BaoGuo.traj_door_env import TrajDoorEnv
+from tasks.BaoGuo.key_rotate_env import KeyRotateEnv
 from tasks.BaoGuo.test_env import TestEnv
 
 def generate_videos(n_episodes=10, max_steps_per_episode=100, video_dir="card_stack_videos"):
@@ -12,7 +13,7 @@ def generate_videos(n_episodes=10, max_steps_per_episode=100, video_dir="card_st
     Generate and save videos of random agent interactions in the CardStack environment.
     """
     # TODO: Change this to make your env
-    task_name = "TrajDoor"
+    task_name = "KeyRotate"
     video_dir = task_name + "_videos"
     version = "v1"
     env = gym.make(f"{task_name}-{version}", render_mode="rgb_array")  # Use the correct environment name
